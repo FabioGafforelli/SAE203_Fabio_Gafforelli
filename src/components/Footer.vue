@@ -27,10 +27,7 @@ export default {
                     Festival
                 </a>
                 <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
-                    Contact
-                </a>
-                <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
-                    Partenaires
+                    Investisseurs
                 </a>
             </div>
 
@@ -49,9 +46,9 @@ export default {
             </div>
 
             <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
-                <div class="text-xs uppercase text-white font-bold mb-6">
+              <RouterLink to="/contact"><div class="text-xs uppercase text-white font-bold mb-6">
                     Contact
-                </div>
+                </div></RouterLink>
             </div>
   
         </div>
