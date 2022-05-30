@@ -34,6 +34,9 @@ export default {
       <p>Message*</p>
       <p class="h-48 w-full my-6 border border-red-800" >Message</p>
   </div>
+  <div class="flex">
+      <p class="rounded bg-red-800 text-white">Envoyer</p>
+  </div>
     </div>
     <footer1 />
 
