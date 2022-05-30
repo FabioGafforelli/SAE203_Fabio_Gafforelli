@@ -16,6 +16,7 @@ export default {
     <histoire />
   </div>
 </div>
+
     </div>
     <br>
     <footer1 />

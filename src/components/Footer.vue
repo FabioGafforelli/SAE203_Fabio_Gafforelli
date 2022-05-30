@@ -14,7 +14,7 @@ export default {
 
 <footer class="bg-red-800 pt-10 sm:mt-10">
     <div>
-        <Logo class=" mt-12 ml-6"></Logo>
+        <Logo class=" w-12 ml-6"></Logo>
     </div>
         <div class="max-w-6xl m-auto text-white flex flex-wrap justify-left">
 
@@ -30,7 +30,7 @@ export default {
                     Contact
                 </a>
                 <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
-                    Investisseurs
+                    Partenaires
                 </a>
             </div>
 
