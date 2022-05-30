@@ -37,9 +37,9 @@ export default {
 
             <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
 
-                <div class="text-xs uppercase text-white font-bold mb-6">
-                   <RouterLink to="/mentions">Mentions Légales</RouterLink>
-                </div>
+               <RouterLink to="/mentions"><div class="text-xs uppercase text-white font-bold mb-6">
+                    Mentions légales
+                </div></RouterLink>
             </div>
 
             <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
