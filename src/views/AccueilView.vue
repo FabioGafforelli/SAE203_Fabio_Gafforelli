@@ -14,5 +14,5 @@ export default {
 
 <img src="/public/images/Flag.jfif" alt="">
 </div>
-
+<footer1 />
 </template>
