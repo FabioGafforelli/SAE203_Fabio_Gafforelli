@@ -25,19 +25,19 @@ export default {
   </div>
   <div class="text-center">
     <img src="/public/images/Artistes-Rammstein.png" class="w-full" alt="Image de l'artiste RAMMSTEIN qui sera présent au festival">
-    <p class="my-6">FOREVER THE FALLEN</p>
+    <p class="my-6">RAMMSTEIN</p>
   </div>
   <div class="text-center ">
     <img src="/public/images/Artistes-ItLives.png" class="w-full" alt="Image de l'artiste IT LIVES IT BREATH qui sera présent au festival">
-    <p class="my-6">FOREVER THE FALLEN</p>
+    <p class="my-6">IT LIVES IT BREATHES</p>
   </div>
   <div class="text-center ">
     <img src="/public/images/Artistes-PD1.png" class="w-full" alt="Image du groupe Parkway driveen qui sera présent au festival">
-    <p class="my-6">FOREVER THE FALLEN</p>
+    <p class="my-6">PARKWAY DRIVE</p>
   </div>
   <div class="text-center ">
     <img src="/public/images/Artistes-PD2.png" class="w-full" alt="Image du groupe Parkway driveen qui sera présent au festival">
-    <p class="my-6">FOREVER THE FALLEN</p>
+    <p class="my-6">PARKWAY DRIVE</p>
   </div>
   
 </div>
