@@ -6,10 +6,9 @@ import prog2 from "../components/icones/Programmation/Prog2.vue"
 import prog3 from "../components/icones/Programmation/Prog3.vue"
 import prog4 from "../components/icones/Programmation/Prog4.vue"
 import prog5 from "../components/icones/Programmation/Prog5.vue"
-import prog6 from "../components/icones/Programmation/Prog6.vue"
 export default {
     name:"App",
-    components: { header1, footer1, prog1, prog2, prog3, prog4, prog5, prog6 },
+    components: { header1, footer1, prog1, prog2, prog3, prog4, prog5 },
 }
 </script>
 
