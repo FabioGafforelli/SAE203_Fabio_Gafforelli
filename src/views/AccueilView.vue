@@ -11,10 +11,11 @@ export default {
     <header1 />
     <div class="bg-indigo-25">
 
-<img src="/public/images/pexels-carousel-3.jpg" alt="">
+<img class="w-full" src="/public/images/pexels-carousel-3.jpg" alt="">
 </div>
 <div>
 <img class="flex" src="/public/images/Map.png" alt="">
+
 </div>
 
 <footer1 />

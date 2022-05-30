@@ -21,23 +21,23 @@ export default {
     <p class="my-6 ">FOREVER THE FALLEN</p>
   </div>
   <div class="text-center ">
-    <img src="/public/images/Imgprog2.png" class="w-full" alt="Image de l'artiste Forever The Fallen qui sera présent au festival">
-    <p class="my-6 ">FOREVER THE FALLEN</p>
+    <img src="/public/images/Imgprog2.png" class="w-full" alt="Image de l'artiste THIS WOLFF qui sera présent au festival">
+    <p class="my-6 ">THIS WOLFF</p>
   </div>
   <div class="text-center ">
-    <img src="/public/images/Imgprog3.png" class="w-full" alt="Image de l'artiste Forever The Fallen qui sera présent au festival">
-    <p class="my-6 ">FOREVER THE FALLEN</p>
+    <img src="/public/images/Imgprog3.png" class="w-full" alt="Image de l'artiste RAMMSTEIN qui sera présent au festival">
+    <p class="my-6 ">RAMMSTEIN</p>
   </div>
   <div class="text-center ">
-    <img src="/public/images/Imgprog4.png" class="w-full" alt="Image de l'artiste Forever The Fallen qui sera présent au festival">
-    <p class="my-6 ">FOREVER THE FALLEN</p>
+    <img src="/public/images/Imgprog4.png" class="w-full" alt="Image de l'artiste IT LIVES IT BREATHES qui sera présent au festival">
+    <p class="my-6 ">IT LIVES IT BREATHES</p>
   </div>
   <div class="text-center ">
-    <img src="/public/images/Imgprog5.png" class="w-full" alt="Image de l'artiste Forever The Fallen qui sera présent au festival">
-    <p class="my-6 ">FOREVER THE FALLEN</p>
+    <img src="/public/images/Imgprog5.png" class="w-full" alt="Image de l'artiste PARKWAY DRIVE qui sera présent au festival">
+    <p class="my-6 ">PARKWAY DRIVE</p>
   </div>
   <div class="text-center ">
-    <img src="/public/images/Imgprog6.png" class="w-full" alt="Image de l'artiste Forever The Fallen qui sera présent au festival">
+    <img src="/public/images/Imgprog6.png" class="w-full" alt="Image de l'artiste PARKWAY DRIVE qui sera présent au festival">
     <p class="my-6 ">PARKWAY DRIVE</p>
   </div>
 </div>
