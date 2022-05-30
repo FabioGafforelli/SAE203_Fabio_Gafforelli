@@ -8,10 +8,10 @@ export default {
 </script>
 
 <template>
-    <header class=" border-b-2 border-indigo-100 bg-red-800">
-        <div class=" flex justify-between m-6  ">
+    <header class=" border-b-2 border-indigo-100 bg-red-800" sm:w-18>
+        <div class=" flex justify-between m-6   ">
             <Logo/>
-              <RouterLink to="/"><p class="flex-grow-0 flex-shrink-0 text-8xl font-semibold italic text-left text-white">ROCOEUR</p></RouterLink>
+              <RouterLink to="/"><p class="flex-grow-0 flex-shrink-0 lg:hidden md:hidden sm:hidden min-w: hidden text-8xl font-semibold italic text-left text-white">ROCOEUR</p></RouterLink>
             <Navigation class="xl:hidden"/>
           <div class="hidden xl:flex items-center overflow-hidden relative gap-2.5">
     <div class="flex overflow-hidden gap-10">

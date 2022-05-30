@@ -1,7 +1,6 @@
 <script>
 import header1 from "../components/Header.vue"
 import footer1 from "../components/Footer.vue"
-
 export default {
     name:"App",
     components: { header1, footer1 },
@@ -12,7 +11,11 @@ export default {
     <header1 />
     <div class="bg-indigo-25">
 
-<img src="/public/images/Flag.jfif" alt="">
+<img src="/public/images/pexels-carousel-3.jpg" alt="">
 </div>
+<div>
+<img class="flex" src="/public/images/Map.png" alt="">
+</div>
+
 <footer1 />
 </template>
