@@ -12,7 +12,6 @@ export default {
     <header1 />
     <div class="bg-indigo-25">
 
-<img src="/public/images/Flag.jfif" alt="">
 </div>
 
 </template>
