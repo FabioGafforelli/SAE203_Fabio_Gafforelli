@@ -1,0 +1,29 @@
+<template>
+<div class="flex justify-center items-center relative gap-2 p-3.5 rounded-lg bg-indigo-500">
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="flex-grow-0 flex-shrink-0 w-5 h-5 relative"
+    preserveAspectRatio="none"
+  >
+    <path
+      d="M9.58329 17.5C13.9555 17.5 17.5 13.9556 17.5 9.58333C17.5 5.21108 13.9555 1.66666 9.58329 1.66666C5.21104 1.66666 1.66663 5.21108 1.66663 9.58333C1.66663 13.9556 5.21104 17.5 9.58329 17.5Z"
+      stroke="white"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    ></path>
+    <path
+      d="M18.3333 18.3333L16.6666 16.6667"
+      stroke="white"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    ></path>
+  </svg>
+</div>
+
+</template>
