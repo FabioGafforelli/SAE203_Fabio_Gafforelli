@@ -19,7 +19,7 @@ export default {
     <a href="#content" class="sr-only focus:not-sr-only text-lg text-white"> Passez au contenu </a>
     <nav class=" lg:flex lg:justify-between items-center">
       <div class="flex justify-between items-center">
-       <RouterLink to="/"><Logo class="w-5/12 h-full p-4"/></RouterLink>
+       <RouterLink to="/"><Logo class="w-42 h-42 p-4"/></RouterLink>
       <span class="text-3xl cursor-pointer lg:hidden block w-8 h-8 mx-4  ">
         <MenuIcon class=" text-white"  aria-controls="menu"
         :aria-expanded="menuOuvert"
