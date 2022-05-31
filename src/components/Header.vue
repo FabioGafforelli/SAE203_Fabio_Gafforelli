@@ -36,24 +36,21 @@ export default {
         leaveFrom="transform  translate-x-0 opacity-100"
         leaveTo="transform translate-x-full opacity-0"
       >
-      <ul id="menu" v-if="menuOuvert" class="lg:hidden text-white text-xl font-timmana mx-6 py-4 text-center" >
+      <ul id="menu" v-if="menuOuvert" class="lg:hidden bg-white w-full text- text-xl font-timmana  py-4 text-center" >
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-white" to="/">Home</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black  " to="/programmation">Programmation</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-white" to="/Programmation">Programmation</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black " to="/artistes">Artistes</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-white " to="/Artistes">Artistes</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black " to="/festival">Festival</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-white " to="/Festival">Festival</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black " to="/billetterie">Billetterie</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-white" to="/Contact">Contact</RouterLink>
-        </li>
-        <li class=" ">
-          <RouterLink class="px-8 bg-Default/me/Noir hover:bg-white hover:text-black  py-4 text-white font-poppins text-base my-6 lg:my-0 " to="/Artistes">ACHETER DES BILLETS</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black" to="/contact">Contact</RouterLink>
         </li>
       </ul>
       </Transition>
