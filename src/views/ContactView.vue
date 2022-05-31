@@ -13,18 +13,18 @@ export default {
     <div class="bg-indigo-25">
 <p class="flex pl-5 pt-5 pb-10 font-black text-red-800 sm:text-base lg:text-xl xl:text-2xl">Contact</p>
 <p class="flex pl-5 pt-5 pb-10 text-black sm:text-base lg:text-xl xl:text-2xl">Une question, une remarque à propos du festival ? Faites nous en part en remplissant le formulaire ci dessous :</p>
-        <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5  lg:mx-10">
+        <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5  ">
  <div class="grid-cols-2 pl-10 pr-10 ">
      <p>Prénom*</p>
-     <input type="text" class="my-6 border relative:  border-red-800"> 
+     <input type="text" class="w-full my-6 border relative:  border-red-800 " placeholder="le beau mohamed"> 
   </div>
   <div class="grid-cols-2 pl-10 pr-10 ">
       <p>Nom*</p>
-    <input type="text" class="my-6 border relative:  border-red-800">
+    <input type="text" class="w-full my-6 border relative:  border-red-800">
   </div>
         </div>
 <br>
- <div class="grid grid-cols-1 pl-10 pr-10 flex ">
+ <div class="grid grid-cols-1 pl-10 pr-10 ">
      <p>Mail*</p>
    <input type="text" class="my-6 border relative:  border-red-800">
   </div>
