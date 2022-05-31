@@ -1,10 +1,4 @@
 <template>
-    <div
-  class="flex justify-start items-start w-[375px] relative px-1 py-[15px] bg-gray-50 border border-white"
->
-  <p class="flex-grow-0 flex-shrink-0 w-[241px] h-[53.11px] text-4xl font-black text-center">
-    Histoire
-  </p>
   <svg
     width="126"
     height="54"
@@ -22,5 +16,4 @@
       stroke-linejoin="round"
     ></path>
   </svg>
-</div>
 </template>

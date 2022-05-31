@@ -16,27 +16,27 @@ export default {
         <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5  lg:mx-10">
  <div class="grid-cols-2 pl-10 pr-10 ">
      <p>Prénom*</p>
-    <p class="my-6 border border-red-800">Prénom</p>
+     <input type="text" class="my-6 border relative:  border-red-800"> 
   </div>
   <div class="grid-cols-2 pl-10 pr-10 ">
       <p>Nom*</p>
-    <p class="my-6 border border-red-800">Nom</p>
+    <input type="text" class="my-6 border relative:  border-red-800">
   </div>
         </div>
 <br>
- <div class="grid grid-cols-1 pl-10 pr-10 ">
+ <div class="grid grid-cols-1 pl-10 pr-10 flex ">
      <p>Mail*</p>
-    <p class="my-6 border border-red-800">Adresse mail</p>
+   <input type="text" class="my-6 border relative:  border-red-800">
   </div>
  <div class="grid grid-cols-1 pl-10 pr-10 ">
      <p>Objet du message*</p>
-    <p class="my-6 border border-red-800">Objet</p>
+    <input type="text" class="my-6 border relative:  border-red-800">
   </div>
   <div class="grid grid-cols-1 pl-10 pr-10">
       <p>Message*</p>
-      <p class="h-48 w-full my-6 border border-red-800" >Message</p>
+<input type="text" class="h-32 w-full my-6 border relative:  border-red-800">
   </div>
-  <div class="flex pl-10 pr-10">
+  <div class="flex pl-10 pr-10 items-end">
       <p class="rounded bg-red-800 text-white">Envoyer</p>
   </div>
     </div>

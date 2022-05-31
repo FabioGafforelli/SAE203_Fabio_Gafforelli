@@ -6,6 +6,7 @@ import FestivalView from '../views/FestivalView.vue';
 import BilletterieView from '../views/BilletterieView.vue';
 import ContactView from '../views/ContactView.vue';
 import MentionslegalesView from '../views/MentionslegalesView.vue';
+import Page404View from '../views/404View.vue';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -16,6 +17,7 @@ const router = createRouter({
     { path: '/billetterie', name: 'BilletterieView', component: BilletterieView },
     { path: '/contact', name: 'ContactView', component: ContactView },
     { path: '/mentions', name: 'MentionslegalesView', component: MentionslegalesView },
+    { path: '/:pathMatch(.*)*', name: 'Page404View', component: Page404View },
   ]
 })
 

@@ -41,6 +41,6 @@ export default {
     <p class="my-6 ">PARKWAY DRIVE</p>
   </div>
 </div>
-
 </div>
+<footer1 />
 </template>
