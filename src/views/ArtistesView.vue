@@ -39,6 +39,10 @@ export default {
     <img src="/public/images/Artistes-PD2.png" class="w-full" alt="Image du groupe Parkway driveen qui sera présent au festival">
     <p class="my-6">PARKWAY DRIVE</p>
   </div>
+  <div class="text-center ">
+    <img src="/public/images/Artistes-PD2.png" class="w-full" alt="Image du groupe Parkway driveen qui sera présent au festival">
+    <p class="my-6">PARKWAY DRIVE</p>
+  </div>
   
 </div>
     </div>

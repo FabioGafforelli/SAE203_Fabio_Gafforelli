@@ -16,25 +16,25 @@ export default {
         <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5  ">
  <div class="grid-cols-2 pl-10 pr-10 ">
      <p>Prénom*</p>
-     <input type="text" class="w-full my-6 border relative:  border-red-800 " placeholder="le beau mohamed"> 
+     <input type="text" class="w-full my-6 border relative:  border-red-800 " placeholder="Prénom"> 
   </div>
   <div class="grid-cols-2 pl-10 pr-10 ">
       <p>Nom*</p>
-    <input type="text" class="w-full my-6 border relative:  border-red-800">
+    <input type="text" class="w-full my-6 border relative:  border-red-800" placeholder="Non">
   </div>
         </div>
 <br>
  <div class="grid grid-cols-1 pl-10 pr-10 ">
      <p>Mail*</p>
-   <input type="text" class="my-6 border relative:  border-red-800">
+   <input type="text" class="my-6 border relative:  border-red-800" placeholder="Adresse mail">
   </div>
  <div class="grid grid-cols-1 pl-10 pr-10 ">
      <p>Objet du message*</p>
-    <input type="text" class="my-6 border relative:  border-red-800">
+    <input type="text" class="my-6 border relative:  border-red-800" placeholder="Objet">
   </div>
   <div class="grid grid-cols-1 pl-10 pr-10">
       <p>Message*</p>
-<input type="text" class="h-32 w-full my-6 border relative:  border-red-800">
+<textarea id="message" name="message"  placeholder="   Message" rows="7" required class="my-3 border-red-800" ></textarea>
   </div>
   <div class="flex pl-10 pr-10 items-end">
       <p class="rounded bg-red-800 text-white">Envoyer</p>
