@@ -40,9 +40,9 @@ export default {
             </div>
 
             <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
-                <div class="text-xs uppercase text-white font-bold mb-6">
-                    POLITIQUE CONFIDENTIALITE
-                </div>
+               <RouterLink to="/billetterie"> <div class="text-xs uppercase text-white font-bold mb-6">
+                    BILLETTERIE
+                </div></RouterLink>
             </div>
 
             <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
