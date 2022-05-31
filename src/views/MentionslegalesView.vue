@@ -231,4 +231,5 @@ Le prestataire externe pourra éventuellement recueillir des informations sur le
 <p class="flex pl-5 pt-5 pb-10 text-black sm:text-base lg:text-xl xl:text-2xl">
     Tout litige en relation avec l’utilisation du site https://Rocoeur.fr est soumis au droit français. En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de Montbéliard
 </p>
+<footer1 />
 </template>
