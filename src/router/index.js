@@ -7,6 +7,7 @@ import BilletterieView from '../views/BilletterieView.vue';
 import ContactView from '../views/ContactView.vue';
 import MentionslegalesView from '../views/MentionslegalesView.vue';
 import Page404View from '../views/404View.vue';
+import Fiche_artisteView from '../views/Fiche_artisteView.vue';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -18,6 +19,7 @@ const router = createRouter({
     { path: '/contact', name: 'ContactView', component: ContactView },
     { path: '/mentions', name: 'MentionslegalesView', component: MentionslegalesView },
     { path: '/:pathMatch(.*)*', name: 'Page404View', component: Page404View },
+    { path: '/ficheartiste', name: 'Fiche_ArtisteView', component: Fiche_artisteView },
   ]
 })
 
