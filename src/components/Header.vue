@@ -38,37 +38,37 @@ export default {
       >
       <ul id="menu" v-if="menuOuvert" class="lg:hidden bg-white w-full text- text-xl font-timmana  py-4 text-center" >
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black  " to="/programmation">Programmation</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-algerian text-black  " to="/programmation">Programmation</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black " to="/artistes">Artistes</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-algerian text-black " to="/artistes">Artistes</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black " to="/festival">Festival</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black font-algerian " to="/festival">Festival</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black " to="/billetterie">Billetterie</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-algerian text-black " to="/billetterie">Billetterie</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm text-black" to="/contact">Contact</RouterLink>
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-algerian text-black" to="/contact">Contact</RouterLink>
         </li>
       </ul>
       </Transition>
       <ul class="lg:flex  gap-6 lg:items-center text-white text-xl font-timmana mx-6 py-4 hidden" >
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm text-white" to="/programmation">Programmation</RouterLink>
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white" to="/programmation">Programmation</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm text-white " to="artistes">Artistes</RouterLink>
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="artistes">Artistes</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm text-white " to="/festival">Festival</RouterLink>
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="/festival">Festival</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm text-white " to="/billetterie">Billetterie</RouterLink>
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="/billetterie">Billetterie</RouterLink>
         </li>
         <li class="my-3">
-          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm text-white " to="/contact">Contact</RouterLink>
+          <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white " to="/contact">Contact</RouterLink>
         </li>
       </ul>    
     </nav>
