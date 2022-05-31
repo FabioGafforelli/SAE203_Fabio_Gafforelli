@@ -37,7 +37,7 @@ export default {
 <textarea id="message" name="message"  placeholder="  Message" rows="7" required class="my-3 border-red-800" ></textarea>
   </div>
   <div class="flex pl-10 pr-10 items-end">
-      <p class="rounded bg-red-800 text-white">Envoyer</p>
+      <button type="submit" class="rounded bg-red-800 text-white">Envoyer</button>
   </div>
     </div>
     <footer1 />
