@@ -23,7 +23,7 @@ const router = createRouter({
     { path: '/:pathMatch(.*)*', name: 'Page404View', component: Page404View },
     { path: '/ficheartiste', name: 'Fiche_artisteView', component: Fiche_artisteView },
     { path: '/ficheconcert', name: 'Fiche_ConcertView', component: Fiche_concertView },
-    { path: '/styleguide', name: 'StyleGuideView', component: StyleGuideView },
+    { path: '/style-guide', name: 'StyleGuideView', component: StyleGuideView },
   ]
 })
 
