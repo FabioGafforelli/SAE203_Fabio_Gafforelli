@@ -180,7 +180,7 @@ Lors du traitement des Données Personnelles, https://Rocoeur.frprend toutes les
 <p class="flex pl-5 pt-5 pb-10 text-black sm:text-base lg:text-xl xl:text-2xl">
     Le site https://Rocoeur.fr contient un certain nombre de liens hypertextes vers d’autres sites, mis en place avec l’autorisation de https://Rocoeur.fr. Cependant, https://Rocoeur.fr n’a pas la possibilité de vérifier le contenu des sites ainsi visités, et n’assumera en conséquence aucune responsabilité de ce fait.
 </p>
-<p class="flex pl-5 pt-5 pb-10 text-black sm:text-base lg:text-xl xl:text-2xl">
+<p class="flex pl-5 pt-5 pb-10 font-inter text-black sm:text-base lg:text-xl xl:text-2xl">
 Sauf si vous décidez de désactiver les cookies, vous acceptez que le site puisse les utiliser. Vous pouvez à tout moment désactiver ces cookies et ce gratuitement à partir des possibilités de désactivation qui vous sont offertes et rappelées ci-après, sachant que cela peut réduire ou empêcher l’accessibilité à tout ou partie des Services proposés par le site.
 </p>
 <p class="flex pl-5 pt-5 pb-10 font-black text-black sm:text-base lg:text-xl xl:text-2xl">

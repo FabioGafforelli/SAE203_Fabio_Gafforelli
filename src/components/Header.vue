@@ -54,7 +54,7 @@ export default {
         </li>
       </ul>
       </Transition>
-      <ul class="lg:flex  gap-6 lg:items-center text-white text-xl font-timmana mx-6 py-4 hidden" >
+      <ul class="lg:flex  gap-6 lg:items-center text-white text-xl font-algerian mx-6 py-4 hidden" >
         <li class="my-3">
           <RouterLink class="my-6 lg:px-2 xl:pt-2 xl:rounded-sm font-algerian text-white" to="/programmation">Programmation</RouterLink>
         </li>
