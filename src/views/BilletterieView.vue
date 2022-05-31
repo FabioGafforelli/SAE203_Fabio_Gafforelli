@@ -14,13 +14,13 @@ export default {
 <p class="flex pl-5 pt-5 pb-10 font-black text-red-800 sm:text-base lg:text-xl xl:text-2xl">Billeterie</p>
 <p class="flex pl-5 pt-5 pb-10 text-black sm:text-base lg:text-xl xl:text-2xl">La billetterie va ouvrir très prochainement, voici les différentes offres qui seront proposés :</p>
 <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5  lg:mx-10">
-  <div class="items-center ">
+  <div class="items-center mx-auto my-auto">
     <Offre1 />
   </div>
-  <div class="items-center">
+  <div class="items-center mx-auto my-auto">
    <Offre2 />
   </div>
-  <div class="items-center">
+  <div class="items-center mx-auto my-auto">
 <Offre3 />
   </div>
 </div>
