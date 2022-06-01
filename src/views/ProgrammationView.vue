@@ -10,7 +10,7 @@ export default {
 
 <template class="bg-indigo-25">
     <header1 />
-    <div class="bg-indigo-25">
+    <div class="bg-indigo-25 dark:bg-black">
 <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-10  lg:mx-10">
   <div class="text-center ">
     <RouterLink to="/ficheconcert"><img src="/public/images/Imgprog1.png" class="w-full" alt="Image de l'artiste Forever The Fallen qui sera présent au festival">
