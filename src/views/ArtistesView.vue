@@ -1,10 +1,13 @@
 <script>
 import header1 from "../components/Header.vue"
 import footer1 from "../components/Footer.vue"
+import Rechercher from "../components/icones/Rechercher.vue"
+import Modification from "../components/icones/Modification.vue"
+import Supprimer from "../components/icones/Supprimer.vue"
 
 export default {
     name:"App",
-    components: { header1, footer1 },
+    components: { header1, footer1, Rechercher, Modification, Supprimer },
 }
 </script>
 
@@ -14,21 +17,20 @@ export default {
         <p class="m-auto w-[311px] h-[81px] text-2xl text-center text-black dark:text-white">
   Retrouvez tous nos artistes en cliquant sur leur fiche
 </p>
-    <div class="container">
-        <div class="card-header">
-            <h5>Liste des pays</h5>
+    <div class="">
+        <div class="">
+            <h5>Liste des Artistes</h5>
         </div>    
         <hr/>
-
         <form>
-          <h6>Nouveau pays</h6>
+          <h6>Nouvel artiste</h6>
           <div class="">
             <div class="">
               <span class="">Nom</span>
             </div>
-            <input type="text" class="" required />
-            <button class="" type="submit" title="Création">
-              <i class=""></i>
+            <input type="text" class="" v-model="Nom" required />
+            <button class="" type="button" @click='createArtistes()' title="Création">
+              <Modifier />
             </button>
           </div>
         </form>
@@ -37,16 +39,16 @@ export default {
             <table class="">
                 <thead>
                     <tr>                      
-                        <th scope="">
-                          <div class="">Liste des Pays actuels</div>                          
+                        <th scope="col">
+                          <div class="">Liste des artistes actuels</div>                          
                           <span class="">
-                            <div class="" >
+                            <div class="ml-80" >
                                 <div class="">
                                   <span class="" >Filtrage</span>
                                 </div>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="" />
                                 <button class="" type="submit" title="Création">
-                                  <i class=""></i>
+                                  <Rechercher />
                                 </button>
                               </div>
                           </span>
@@ -54,19 +56,19 @@ export default {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr v-for='Artistes in orderByName' :key='Artistes.id'>
                         <td>
                           <form>
                             <div class="">
                               <div class="">
                                 <span class="">Nom</span>
                               </div>
-                              <input type="text" class="-control" required />
-                              <button class="" type="submit" title="Création">
-                                <i class=""></i>
+                              <input type="text" class="" v-model="Artistes.Nom" required />
+                              <button class="" type="button" @click.prevent="updateArtistes(Artistes)" title="Modification">
+                                <Modification />
                               </button>
-                              <button class="" type="submit" title="Suppression">
-                                <i class=""></i>
+                              <button class="" type="button" @click.prevent="deleteArtistes(Artistes)" title="Suppression">
+                                <Supprimer />
                               </button>
                             </div>
                           </form>
