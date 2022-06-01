@@ -1,6 +1,6 @@
 <template>
 <Header />
-    <h1 class="py-8 md:text-4xl md:pt-12 lg:text-5xl">Les artistes</h1>
+    <h1 class="py-8 md:text-4xl md:pt-12 lg:text-5xl font-algerian text-red-800">Les artistes, cliquez sur un artiste pour voir sa fiche</h1>
 
     <div class="">
         <div class="">
