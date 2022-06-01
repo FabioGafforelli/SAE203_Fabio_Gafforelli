@@ -22,31 +22,31 @@ export default {
 
         <form>
           <h6>Nouveau pays</h6>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Nom</span>
+          <div class="">
+            <div class="">
+              <span class="">Nom</span>
             </div>
-            <input type="text" class="form-control" required />
-            <button class="btn btn-light" type="submit" title="Création">
-              <i class="fa fa-save fa-lg"></i>
+            <input type="text" class="" required />
+            <button class="" type="submit" title="Création">
+              <i class=""></i>
             </button>
           </div>
         </form>
 
-        <div class="card-body table-responsive">
-            <table class="table text-light">
+        <div class="">
+            <table class="">
                 <thead>
                     <tr>                      
-                        <th scope="col">
-                          <div class="float-left">Liste des Pays actuels</div>                          
-                          <span class="float-right">
-                            <div class="input-group" >
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text" >Filtrage</span>
+                        <th scope="">
+                          <div class="">Liste des Pays actuels</div>                          
+                          <span class="">
+                            <div class="" >
+                                <div class="">
+                                  <span class="" >Filtrage</span>
                                 </div>
                                 <input type="text" class="form-control" />
-                                <button class="btn btn-light" type="submit" title="Création">
-                                  <i class="fa fa-search fa-lg"></i>
+                                <button class="" type="submit" title="Création">
+                                  <i class=""></i>
                                 </button>
                               </div>
                           </span>
@@ -57,16 +57,16 @@ export default {
                     <tr>
                         <td>
                           <form>
-                            <div class="input-group">
-                              <div class="input-group-prepend">
-                                <span class="input-group-text">Nom</span>
+                            <div class="">
+                              <div class="">
+                                <span class="">Nom</span>
                               </div>
-                              <input type="text" class="form-control" required />
-                              <button class="btn btn-light" type="submit" title="Création">
-                                <i class="fa fa-save fa-lg"></i>
+                              <input type="text" class="-control" required />
+                              <button class="" type="submit" title="Création">
+                                <i class=""></i>
                               </button>
-                              <button class="btn btn-light" type="submit" title="Suppression">
-                                <i class="fa fa-trash fa-lg"></i>
+                              <button class="" type="submit" title="Suppression">
+                                <i class=""></i>
                               </button>
                             </div>
                           </form>
