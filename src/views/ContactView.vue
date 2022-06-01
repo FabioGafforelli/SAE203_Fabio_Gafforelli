@@ -26,7 +26,7 @@ export default {
         </div>
 <br>
  <div class="grid grid-cols-1 pl-10 pr-10 ">
-  <label for="emailAddress">Adresse Mail</label>
+  <label for="emailAddress">Adresse Mail*</label>
               <input id="emailAddress" type="email" name="email" placeholder="Indiquez votre email" required class="my-6 border relative:  border-red-800">
   </div>
  <div class="grid grid-cols-1 pl-10 pr-10 ">
@@ -44,6 +44,7 @@ export default {
       <button type="submit" class="rounded bg-red-800 text-white">Envoyer</button>
   </div>
   </form>
+  <p class="flex pl-5 pt-5 pb-10 text-black sm:text-base lg:text-xl xl:text-2xl">* champs obligatoires</p>
     </div>
     <footer1 />
 
