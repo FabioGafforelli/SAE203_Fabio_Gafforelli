@@ -14,7 +14,8 @@ export default {
 
 <footer class="bg-red-800 pt-10 sm:mt-10">
     <div>
-        <Logo class=" w-12 ml-6"></Logo>
+        <RouterLink to="/">
+        <Logo class=" w-12 ml-6" /></RouterLink>
     </div>
         <div class="max-w-6xl m-auto text-white flex flex-wrap justify-left">
 
@@ -23,12 +24,9 @@ export default {
                 <div class="text-xs uppercase text-white font-bold mb-6">
                     A propos
                 </div>
-                 <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
+                 <RouterLink to="/festival" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
                     Festival
-                </a>
-                <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm  font-normal duration-700">
-                    Investisseurs
-                </a>
+                </RouterLink>
             </div>
 
 
