@@ -28,7 +28,7 @@ export default {
             <div class="">
               <span class="">Nom</span>
             </div>
-            <input type="text" class="bg-red-800" v-model="Nom" required />
+            <input type="text" class="bg-red-800 text-white" v-model="Nom" required />
             <button class="" type="button" @click='createArtistes()' title="Création">
               <Modification />
             </button>
@@ -46,7 +46,7 @@ export default {
                                 <div class="">
                                   <span class="">Filtrage</span>
                                 </div>
-                                <input type="text" class="bg-red-800" />
+                                <input type="text" class="bg-red-800 text-white" />
                                 <button class="" type="submit" title="Création">
                                   <Rechercher />
                                 </button>
