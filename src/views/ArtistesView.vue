@@ -21,10 +21,10 @@
           </div>
         </form>
                 <form>
-          <h6 class="">Nouvel artiste</h6>
+          <h6 class="dark: text-white">Nouvel artiste</h6>
           <div class="">
             <div class="">
-              <span class="">Nom</span>
+              <span class="dark: text-white">Nom</span>
             </div>
             <input type="text" class="bg-red-800 text-white" v-model="Nom" required />
             <button class="" type="button" @click='createArtistes()' title="Création">
@@ -32,7 +32,7 @@
             </button>
           </div>
             <div class="">
-              <span class="">Biographie</span>
+              <span class="dark: text-white">Biographie</span>
             </div>
             <input type="text" class="bg-red-800 text-white" v-model="Bio" required />
             <button class="" type="button" @click='createArtistes()' title="Création">
