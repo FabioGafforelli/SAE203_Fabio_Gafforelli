@@ -13,7 +13,7 @@
             <div class="">
               <span class="">Nom</span>
             </div>
-            <input type="text" class="bg-red-800 text-white" v-model="Nom" required />
+            <input type="text" class="" v-model="Nom" required />
             <button class="" type="button" @click='createArtistes()' title="Création">
               <Modification />
             </button>
@@ -31,7 +31,7 @@
                                 <div class="">
                                   <span class="">Filtrage</span>
                                 </div>
-                                <input type="text" class="bg-red-800 text-white" v-model='filter'/>
+                                <input type="text" class="" v-model='filter'/>
                                 <button class="" type="button" title="Filtrage">
                                   <Rechercher />
                                 </button>
@@ -41,7 +41,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for='Artistes in filterByName' :key='Artistes.id'>
+                    <tr v-for='Artistes in listeArtistesSynchro' :key='Artistes.id'>
                         <td>
                           <form>
                             <div class="">
@@ -66,38 +66,10 @@
  <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,2fr))] gap-8 py-10">
         <div v-for="Artistes in listeArtistesSynchro" :key="Artistes.id">
             <card
-                :Nom="ArtisteS.Nom"
-                :Role="Artistes.Role"
-                :Bio="Artistes.Bio"
-                :Jour="Artistes.Jour"
-                Image="/img-squirrel/Annabelle_Rogelet.webp"/>
+                :Nom="Artistes.Nom"
+                :Bio="Artistes.Bio" />
         </div>
-<div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5  lg:mx-10">
-  <div class="text-center dark:text-white ">
-   <RouterLink to="/ficheartiste"> <img src="/public/images/Artistes-FF.png" class="w-full" alt="Image de l'artiste Forever The Fallen qui sera présent au festival">
-    <p class="my-6 ">FOREVER THE FALLEN</p></RouterLink>
-  </div>
-  <div class="text-center dark:text-white">
-    <RouterLink to="/ficheartiste"><img src="/public/images/Artistes-TW.png" class="w-full" alt="Image de l'artiste THIS WOLFF qui sera présent au festival">
-    <p class="my-6">THIS WOLFF</p></RouterLink>
-  </div>
-  <div class="text-center dark:text-white">
-    <RouterLink to="/ficheartiste"><img src="/public/images/Artistes-Rammstein.png" class="w-full" alt="Image de l'artiste RAMMSTEIN qui sera présent au festival">
-    <p class="my-6">RAMMSTEIN</p></RouterLink>
-  </div>
-  <div class="text-center dark:text-white ">
-    <RouterLink to="/ficheartiste"><img src="/public/images/Artistes-ItLives.png" class="w-full" alt="Image de l'artiste IT LIVES IT BREATH qui sera présent au festival">
-    <p class="my-6">IT LIVES IT BREATHES</p></RouterLink>
-  </div>
-  <div class="text-center dark:text-white ">
-    <RouterLink to="/ficheartiste"><img src="/public/images/Artistes-PD1.png" class="w-full" alt="Image du groupe Parkway driveen qui sera présent au festival">
-    <p class="my-6">PARKWAY DRIVE</p></RouterLink>
-  </div>
-  <div class="text-center dark:text-white">
-    <RouterLink to="/ficheartiste"><img src="/public/images/Artistes-PD2.png" class="w-full" alt="Image du groupe Parkway driveen qui sera présent au festival">
-    <p class="my-6">PARKWAY DRIVE</p></RouterLink>
-  </div>
-  </div>
+
 </div>
     <Footer />
 </template>
@@ -119,7 +91,7 @@ import {
     addDoc, 
     updateDoc, 
     deleteDoc, 
-    onSnapshot } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+    onSnapshot } from 'https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js'
 export default {
     data(){ // Données de la vue
             return{                
@@ -176,6 +148,7 @@ export default {
                 // Sauf le id qui est créé automatiquement
                 const docRef = await addDoc(dbArtistes,{
                     Nom: this.Nom,
+                    Bio: this.Bio
                 })
                 console.log('document créé avec le id : ', docRef.id);
              },
@@ -200,8 +173,8 @@ export default {
                 // Suppression du pays référencé
                 await deleteDoc(docRef);
              },
-        },
         
+},
   name: "App",
   components: { card, Rechercher, Modification, Supprimer, Header, Footer },
 };
