@@ -12,7 +12,7 @@
             <div class="">
               <span class="text-black dark:text-white">Créer un artiste</span>
             </div>
-            <RouterLink to="/Modifier">
+            <RouterLink to="/inscription">
               <div class="flex justify-start mr-40 my-6">
                 <BoutonImage @click='createArtistes()' title="Création"
                 Nom="Inscription d'un artiste"/>
