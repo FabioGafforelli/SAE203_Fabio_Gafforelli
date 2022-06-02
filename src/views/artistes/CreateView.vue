@@ -74,7 +74,7 @@
                         Créer
                     </button>
                     <button class="" >
-                        <router-link to="/artistes" ><Supprimer /></router-link>
+                        <router-link to="/listesartistes" ><Supprimer /></router-link>
                     </button>
                 </div>
 
@@ -106,6 +106,8 @@ import {
     getDownloadURL,
     uploadString,
     } from 'https://www.gstatic.com/firebasejs/9.8.2/firebase-storage.js'
+// import { preview } from "vite";
+
 export default {
     name:'CreateView',
     data() {
@@ -125,7 +127,7 @@ export default {
         // Appel de la liste des artistes
         this.getArtistes();
     },
-}
+};
 </script>
 
 
