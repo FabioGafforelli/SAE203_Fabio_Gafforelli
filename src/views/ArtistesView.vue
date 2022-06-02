@@ -4,13 +4,13 @@
 <div class="bg-indigo-25 dark:bg-black">
     <div class="">
         <div class="">
-            <h5 class="dark: text-white">Liste des Artistes</h5>
+            <h5 class="text-black dark:text-white">Liste des Artistes</h5>
         </div>    
         <hr/>
         <form>
           <div class="">
             <div class="">
-              <span class="dark: text-white">Créer un artiste</span>
+              <span class="text-black dark:text-white">Créer un artiste</span>
             </div>
             <RouterLink to="/Modifier">
               <div class="flex justify-start mr-40 my-6">
@@ -21,10 +21,10 @@
           </div>
         </form>
                 <form>
-          <h6 class="dark: text-white">Nouvel artiste</h6>
+          <h6 class="text-black dark:text-white">Nouvel artiste</h6>
           <div class="">
             <div class="">
-              <span class="dark: text-white">Nom</span>
+              <span class="text-black dark:text-white">Nom</span>
             </div>
             <input type="text" class="bg-red-800 text-white" v-model="Nom" required />
             <button class="" type="button" @click='createArtistes()' title="Création">
@@ -32,7 +32,7 @@
             </button>
           </div>
             <div class="">
-              <span class="dark: text-white">Biographie</span>
+              <span class="text-black dark:text-white">Biographie</span>
             </div>
             <input type="text" class="bg-red-800 text-white" v-model="Bio" required />
             <button class="" type="button" @click='createArtistes()' title="Création">
@@ -45,10 +45,10 @@
                 <thead>
                     <tr>                      
                         <th scope="col">
-                          <div class="dark: text-white">Liste des artistes actuels</div>                          
+                          <div class="text-black dark:text-white">Liste des artistes actuels</div>                          
                           <span class="">
                             <div class="ml-80" >
-                                <div class="dark: text-white">
+                                <div class="text-black dark:text-white">
                                   <span class="">Filtrage</span>
                                 </div>
                                 <input type="text" class="bg-red-800 text-white" v-model='filter'/>
@@ -64,7 +64,7 @@
                     <tr v-for='Artistes in listeArtistesSynchro' :key='Artistes.id'>
                         <td>
                           <form>
-                            <div class="dark: text-white">
+                            <div class="text-black dark:text-white">
                               <div class="">
                                 <span class="">Nom</span>
                               </div>
