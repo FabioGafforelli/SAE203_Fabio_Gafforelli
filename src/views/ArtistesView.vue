@@ -64,7 +64,7 @@
                     <tr v-for='Artistes in listeArtistesSynchro' :key='Artistes.id'>
                         <td>
                           <form>
-                            <div class="">
+                            <div class="dark: text-white">
                               <div class="">
                                 <span class="">Nom</span>
                               </div>
