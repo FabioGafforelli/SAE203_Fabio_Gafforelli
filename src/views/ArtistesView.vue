@@ -18,6 +18,13 @@
               <Modification />
             </button>
           </div>
+            <div class="">
+              <span class="">Biographie</span>
+            </div>
+            <input type="text" class="bg-red-800 text-white" v-model="Bio" required />
+            <button class="" type="button" @click='createArtistes()' title="Création">
+              <Modification />
+            </button>
         </form>
 
         <div class="">
