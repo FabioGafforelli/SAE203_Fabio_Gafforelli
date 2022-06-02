@@ -119,7 +119,12 @@ export default {
             }
         }
     },
-    components: { header1, footer1, Supprimer }
+    components: { header1, footer1, Supprimer },
+        
+    mounted(){ // Montage de la vue
+        // Appel de la liste des artistes
+        this.getArtistes();
+    },
 }
 </script>
 
