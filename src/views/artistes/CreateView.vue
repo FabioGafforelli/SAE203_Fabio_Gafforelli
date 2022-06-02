@@ -5,7 +5,7 @@
 
         <section class="pb-6 mx-2 md:max-w-[70%] md:m-auto lg:max-w-[50%] lg:pb-14">
             <form enctype="multipart/form-data"
-                @submit.prevent="createArtistes">
+                @submit.prevent='createArtistes()'>
                 <div class="bg-red-800 p-2 rounded-xl flex gap-2">
                     <div class="mx-auto flex flex-col justify-end mb-10">
                         <div class="m-auto">
@@ -124,7 +124,7 @@ export default {
                 const db = getFirestore();
                 const docRef = addDoc(collection(db, 'Artistes'), this.Artistes);
             });
-            this.$router.push('/Artistes')
+            this.$router.push('/artistes')
         },
 
     },
