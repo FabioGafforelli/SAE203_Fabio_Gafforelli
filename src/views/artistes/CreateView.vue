@@ -89,6 +89,23 @@ import header1 from '../../components/Header.vue'
 import footer1 from '../../components/Footer.vue'
 import Supprimer from '../../components/icones/Supprimer.vue';
 
+import { 
+    getFirestore, 
+    collection, 
+    doc, 
+    getDocs, 
+    addDoc, 
+    updateDoc, 
+    deleteDoc, 
+    onSnapshot,
+    query,
+    orderBy } from 'https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js'
+import {
+    getStorage,
+    ref,
+    getDownloadURL,
+    uploadString,
+    } from 'https://www.gstatic.com/firebasejs/9.8.2/firebase-storage.js'
 export default {
     name: "CreateView",
     data() {
