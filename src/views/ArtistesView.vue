@@ -1,16 +1,22 @@
 <script>
 import header1 from "../components/Header.vue"
 import footer1 from "../components/Footer.vue"
+import BoutonImage from "../components/icones/modifierListe/BoutonImage.vue"
 
 export default {
     name:"App",
-    components: { header1, footer1 },
+    components: { header1, footer1, BoutonImage },
 }
 </script>
 
 <template class="bg-indigo-25">
     <header1 />
     <div class="bg-indigo-25 dark:bg-black">
+          <RouterLink to="/listeartistes" >
+          <button type="submit">
+          <BoutonImage class="w-20 bg-red-800 text-white" Nom="Listes Artistes Synchro"/>
+          </button>
+          </RouterLink>
         <p class="m-auto w-[311px] h-[81px] text-2xl text-center text-black dark:text-white">
   Retrouvez tous nos artistes en cliquant sur leur fiche
 </p>
