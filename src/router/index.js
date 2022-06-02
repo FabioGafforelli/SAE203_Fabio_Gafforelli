@@ -11,6 +11,7 @@ import Fiche_artisteView from '../views/Fiche_artisteView.vue';
 import Fiche_concertView from '../views/Fiche_concertView.vue';
 import StyleGuideView from '../views/StyleGuideView.vue';
 import ModifierView from '../views/artistes/ModifierView.vue';
+import CreateView from '../views/artistes/CreateView.vue';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -26,6 +27,7 @@ const router = createRouter({
     { path: '/ficheconcert', name: 'Fiche_ConcertView', component: Fiche_concertView },
     { path: '/style-guide', name: 'StyleGuideView', component: StyleGuideView },
     { path: '/Modifier', name: 'ModifierView', component: ModifierView },
+    { path: '/inscription', name: 'CreateView', component: CreateView },
   ]
 })
 
