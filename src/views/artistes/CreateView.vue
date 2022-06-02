@@ -107,9 +107,17 @@ import {
     uploadString,
     } from 'https://www.gstatic.com/firebasejs/9.8.2/firebase-storage.js'
 export default {
-    name: "CreateView",
+    name:'CreateView',
     data() {
-        return {};
+        return {
+            imageData:null,         // Image prévisualisée
+            listePays:[],           // Liste des pays pour la nationalité du participant
+            participant:{           // Le participant à créer
+                Nom:null,               // son nom
+                photo:null,             // sa photo (nom du fichier)
+                Bio:null        // sa biographie
+            }
+        }
     },
     components: { header1, footer1, Supprimer }
 }
