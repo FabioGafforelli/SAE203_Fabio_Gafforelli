@@ -13,6 +13,7 @@ import StyleGuideView from '../views/StyleGuideView.vue';
 import ModifierView from '../views/artistes/ModifierView.vue';
 import CreateView from '../views/artistes/CreateView.vue';
 import ListeArtistesView from '../views/artistes/ListeArtistesView.vue';
+import DeleteView from '../views/artistes/DeleteView.vue';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -30,6 +31,7 @@ const router = createRouter({
     { path: '/Modifier', name: 'ModifierView', component: ModifierView },
     { path: '/inscription', name: 'CreateView', component: CreateView },
     { path: '/listeartistes', name: 'ListeArtistesView', component: ListeArtistesView },
+    { path: '/Supprimer', name: 'DeleteView', component: DeleteView },
   ]
 })
 

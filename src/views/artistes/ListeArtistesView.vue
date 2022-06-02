@@ -72,9 +72,9 @@
                               <button class="fill-black" type="button" @click.prevent="updateArtistes(Artistes)" title="Modification">
                                 <Modification />
                               </button>
-                              <button class="" type="button" @click.prevent="deleteArtistes(Artistes)" title="Suppression">
+                              <RouterLink to="/Supprimer">
                                 <Supprimer />
-                              </button>
+                              </RouterLink>
                             </div>
                           </form>
                         </td>
