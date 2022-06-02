@@ -13,7 +13,7 @@
             <div class="">
               <span class="">Nom</span>
             </div>
-            <input type="text" class="" v-model="Nom" required />
+            <input type="text" class="bg-red-800 text-white" v-model="Nom" required />
             <button class="" type="button" @click='createArtistes()' title="Création">
               <Modification />
             </button>
@@ -31,7 +31,7 @@
                                 <div class="">
                                   <span class="">Filtrage</span>
                                 </div>
-                                <input type="text" class="" v-model='filter'/>
+                                <input type="text" class="bg-red-800 text-white" v-model='filter'/>
                                 <button class="" type="button" title="Filtrage">
                                   <Rechercher />
                                 </button>
