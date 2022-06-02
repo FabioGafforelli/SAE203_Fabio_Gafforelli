@@ -45,10 +45,10 @@
                 <thead>
                     <tr>                      
                         <th scope="col">
-                          <div class="">Liste des artistes actuels</div>                          
+                          <div class="dark: text-white">Liste des artistes actuels</div>                          
                           <span class="">
                             <div class="ml-80" >
-                                <div class="">
+                                <div class="dark: text-white">
                                   <span class="">Filtrage</span>
                                 </div>
                                 <input type="text" class="bg-red-800 text-white" v-model='filter'/>
