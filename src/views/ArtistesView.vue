@@ -48,7 +48,7 @@
                               <div class="">
                                 <span class="">Nom</span>
                               </div>
-                              <input type="text" class="" v-model="Artistes.Nom" required />
+                              <input type="text" class="bg-red-800 text-white" v-model="Artistes.Nom" required />
                               <button class="fill-black" type="button" @click.prevent="updateArtistes(Artistes)" title="Modification">
                                 <Modification />
                               </button>
