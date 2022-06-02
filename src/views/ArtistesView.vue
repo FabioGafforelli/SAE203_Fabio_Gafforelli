@@ -4,13 +4,13 @@
 <div class="bg-indigo-25 dark:bg-black">
     <div class="">
         <div class="">
-            <h5 class="">Liste des Artistes</h5>
+            <h5 class="dark: text-white">Liste des Artistes</h5>
         </div>    
         <hr/>
         <form>
           <div class="">
             <div class="">
-              <span class="">Créer un artiste</span>
+              <span class="dark: text-white">Créer un artiste</span>
             </div>
             <RouterLink to="/Modifier">
               <div class="flex justify-start mr-40 my-6">
@@ -21,7 +21,7 @@
           </div>
         </form>
                 <form>
-          <h6>Nouvel artiste</h6>
+          <h6 class="">Nouvel artiste</h6>
           <div class="">
             <div class="">
               <span class="">Nom</span>
