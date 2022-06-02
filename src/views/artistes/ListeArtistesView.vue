@@ -28,7 +28,7 @@
             </div>
             <input type="text" class="bg-red-800 text-white" v-model="Nom" required />
             <button class="" type="button" @click='createArtistes()' title="Création">
-              <Modification />
+              <Creation />
             </button>
           </div>
             <div class="">
@@ -36,7 +36,7 @@
             </div>
             <input type="text" class="bg-red-800 text-white" v-model="Bio" required />
             <button class="" type="button" @click='createArtistes()' title="Création">
-              <Modification />
+              <Creation />
             </button>
         </form>
 
@@ -103,6 +103,8 @@ import Supprimer from "../../components/icones/Supprimer.vue"
 import Header1 from '../../components/Header.vue';
 import Footer1 from '../../components/Footer.vue';
 import BoutonImage from '../../components/icones/modifierListe/BoutonImage.vue';
+import Creation from "../../components/icones/modifierListe/creation.vue";
+
 // Bibliothèque Firestore : import des fonctions
 import { 
     getFirestore, 
@@ -197,6 +199,6 @@ export default {
         
 },
   name: "App",
-  components: { card, Rechercher, Modification, Supprimer, Header1, Footer1, BoutonImage },
+  components: { card, Rechercher, Modification, Supprimer, Header1, Footer1, BoutonImage, Creation },
 };
 </script>
