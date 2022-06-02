@@ -74,7 +74,7 @@
                         Créer
                     </button>
                     <button class="" >
-                        <router-link to="/artistes" >Cancel</router-link>
+                        <router-link to="/artistes" ><Supprimer /></router-link>
                     </button>
                 </div>
 
@@ -87,13 +87,14 @@
 <script>
 import header1 from '../../components/Header.vue'
 import footer1 from '../../components/Footer.vue'
+import Supprimer from '../../components/icones/Supprimer.vue';
 
 export default {
     name: "CreateView",
     data() {
         return {};
     },
-    components: { header1, footer1 }
+    components: { header1, footer1, Supprimer }
 }
 </script>
 
