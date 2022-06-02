@@ -5,7 +5,7 @@
 
         <section class="pb-6 mx-2 md:max-w-[70%] md:m-auto lg:max-w-[50%] lg:pb-14">
             <form enctype="multipart/form-data"
-                @submit.prevent='createArtistes()'>
+                @submit.prevent="createArtistes()">
                 <div class="bg-red-800 p-2 rounded-xl flex gap-2">
                     <div class="mx-auto flex flex-col justify-end mb-10">
                         <div class="m-auto">
@@ -87,10 +87,9 @@ export default {
     name: "CréationView",
     components: { BoutonImage, header1, footer1 },
 
-    mounted (){
+   mounted (){
         this.getArtistes();
     },
-
     methods : {
         async getArtistes (){
             const firestore = getFirestore();
@@ -118,7 +117,7 @@ export default {
         },
         async createArtistes(){
             const storage = getStorage();
-            const refStorage = ref(storage, 'Artistes/'+this.Artistes.photo);
+            const refStorage = ref(storage, 'artistes/'+this.Artistes.photo);
             await uploadString(refStorage, this.imageData, 'data_url').then((snapshot) => {
                 console.log('Uploaded a base64 string');
                 const db = getFirestore();
@@ -126,8 +125,6 @@ export default {
             });
             this.$router.push('/artistes')
         },
-
     },
 };
-
 </script>
