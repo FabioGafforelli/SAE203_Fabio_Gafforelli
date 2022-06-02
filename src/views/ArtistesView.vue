@@ -1,13 +1,26 @@
 <template>
 <Header />
     <h1 class="py-8 md:text-4xl md:pt-12 lg:text-5xl font-algerian text-red-800">Les artistes, cliquez sur un artiste pour voir sa fiche</h1>
-
+<div class="bg-indigo-25 dark:bg-black">
     <div class="">
         <div class="">
-            <h5>Liste des Artistes</h5>
+            <h5 class="">Liste des Artistes</h5>
         </div>    
         <hr/>
         <form>
+          <div class="">
+            <div class="">
+              <span class="">Créer un artiste</span>
+            </div>
+            <RouterLink to="/Modifier">
+              <div class="flex justify-start mr-40 my-6">
+                <BoutonImage @click='createArtistes()' title="Création"
+                Nom="Inscription d'un artiste"/>
+              </div>
+            </RouterLink>
+          </div>
+        </form>
+                <form>
           <h6>Nouvel artiste</h6>
           <div class="">
             <div class="">
@@ -79,6 +92,7 @@
 
 </div>
     <Footer />
+    </div>
 </template>
 
 <script>
@@ -89,6 +103,7 @@ import Modification from "../components/icones/Modification.vue"
 import Supprimer from "../components/icones/Supprimer.vue"
 import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
+import BoutonImage from '../components/icones/modifierListe/BoutonImage.vue';
 // Bibliothèque Firestore : import des fonctions
 import { 
     getFirestore, 
@@ -183,6 +198,6 @@ export default {
         
 },
   name: "App",
-  components: { card, Rechercher, Modification, Supprimer, Header, Footer },
+  components: { card, Rechercher, Modification, Supprimer, Header, Footer, BoutonImage },
 };
 </script>
