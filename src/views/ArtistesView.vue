@@ -17,9 +17,12 @@ export default {
           <BoutonImage class="w-20 bg-red-800 text-white" Nom="Listes Artistes Synchro"/>
           </button>
           </RouterLink>
-        <p class="m-auto w-[311px] h-[81px] text-2xl text-center text-black dark:text-white">
+<p class="m-auto text-2xl text-center font-algerian text-red-800 dark:text-white">
+Artistes</p>
+<p class="m-auto text-2xl text-center font-algerian text-black dark:text-white">
   Retrouvez tous nos artistes en cliquant sur leur fiche
 </p>
+<br>
 <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5  lg:mx-10">
   <div class="text-center dark:text-white ">
    <RouterLink to="/ficheartiste"> <img src="/public/images/Artistes-FF.png" class="w-full" alt="Image de l'artiste Forever The Fallen qui sera présent au festival">
