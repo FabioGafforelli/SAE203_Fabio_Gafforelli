@@ -76,7 +76,9 @@
                               </div>
                               <input type="text" class="bg-red-800 text-white" v-model="Artistes.Nom" required />
                               <button class="fill-black" type="button" @click.prevent="updateArtistes(Artistes)" title="Modification">
-                                <Modification />
+                               <RouterLink to="/modifier">
+                               <Modification />
+                               </RouterLink>
                               </button>
                               <RouterLink to="/Supprimer">
                                 <Supprimer />
@@ -123,12 +125,7 @@ import {
     deleteDoc, 
     onSnapshot } from 'https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js'
 
-import {
-    getStorage,
-    ref,
-    getDownloadURL,
-    uploadString,
-    } from 'https://www.gstatic.com/firebasejs/9.8.2/firebase-storage.js'
+import { getStorage, ref, getDownloadURL, uploadString } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-storage.js";
 
 export default {
     data(){ // Données de la vue
@@ -186,7 +183,8 @@ export default {
                 // Sauf le id qui est créé automatiquement
                 const docRef = await addDoc(dbArtistes,{
                     Nom: this.Nom,
-                    Bio: this.Bio
+                    Bio: this.Bio,
+                    photo: this.photo
                 })
                 console.log('document créé avec le id : ', docRef.id);
              },
