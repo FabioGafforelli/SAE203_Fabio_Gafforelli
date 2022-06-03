@@ -21,7 +21,7 @@
                         <label class="flex flex-col mb-3">
                             <span class="font-semibold my-1 text-white" >Nom :  </span>
                             <input class="border-none w-80" type="text" placeholder="Nom de la personne"
-                                v-model="Nom" required />  
+                                v-model="Artistes.Nom" required />  
                         </label>
                         <label class="flex flex-col mb-3">
                             <span class="text-white">Biographie :  </span>
@@ -123,7 +123,7 @@ export default {
                 const db = getFirestore();
                 const docRef = addDoc(collection(db, 'Artistes'), this.Artistes);
             });
-            this.$router.push('/artistes')
+            this.$router.push('/listeartistes')
         },
     },
 };
