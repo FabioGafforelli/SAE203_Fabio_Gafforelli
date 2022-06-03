@@ -16,7 +16,7 @@ export default {
     props : {
         Nom: String,
         Bio: String,
-        photo:String,
+        photo:String
     }
 };
 </script>
