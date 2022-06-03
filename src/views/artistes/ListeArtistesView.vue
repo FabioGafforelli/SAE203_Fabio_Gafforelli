@@ -18,7 +18,7 @@
                 Nom="Inscription d'un artiste"/>
               </div>
             </RouterLink>
-            <RouterLink to="/artistes">
+            <RouterLink to="/artistes" >
               <div class="flex justify-start mr-40 my-6">
                 <BoutonImage title="Retour page artiste"
                 Nom="Retour page artiste"/>
@@ -93,7 +93,8 @@
         <div v-for="Artistes in listeArtistesSynchro" :key="Artistes.id">
             <card
                 :Nom="Artistes.Nom"
-                :Bio="Artistes.Bio" />
+                :Bio="Artistes.Bio"
+                :photo="Artistes.photo" />
         </div>
 
 </div>
