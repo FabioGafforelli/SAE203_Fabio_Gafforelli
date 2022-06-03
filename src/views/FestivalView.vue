@@ -14,6 +14,12 @@ export default {
 <template class="bg-indigo-25">
     <header1 />
     <div class="bg-indigo-25 dark:bg-black">
+            <p class="m-auto text-2xl text-center font-algerian text-red-800 dark:text-white">
+Festival</p>
+<p class="m-auto sm:text-base lg:text-xl xl:text-2xl text-center font-algerian text-black dark:text-white">
+  Retrouvez sur cette page les informations essentielles vis à vis du festival
+</p>
+<br>
         <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-10  lg:mx-10">
   <div class="m-auto text-center bg-gray-200 text-red-800 font-algerian ">
     <histoire class="m-auto h-32 w-32" />
