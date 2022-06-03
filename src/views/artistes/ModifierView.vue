@@ -1,45 +1,137 @@
 <template>
-<header1 />
-    <h1 class="py-8 md:text-4xl md:pt-8 lg:text-5xl font-algerian text-center text-red-800">Modifier les artistes</h1>
+<Header1 />
+    <div class="bg-red-800 mt-12 px-5 flex flex-col gap-20 relative">
+        <div class="flex justify-between items-end">
+            <h1 class="text-white font-algerian text-2xl">Modifier l'artiste</h1>
+        </div>
+        <form @submit.prevent="updateArtiste">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div class="grid place-items-center">
+                    <img :src="imageData" class="w-1/2">
+                </div>
+                <div class="grid grid-cols-1 gap-14">
+                    <div class="flex h-10 text-black rounded-sm overflow-hidden">
+                        <div class="bg-white px-5 border-[1px] flex justify-center items-center">Nom</div>
+                        <input class="w-full" type="text" placeholder="Nom de l'artiste" v-model="Artistes.Nom" required>
+                    </div>
+                <div class="grid grid-cols-1 gap-14">
+                    <div class="flex h-10 text-black rounded-sm overflow-hidden">
+                        <div class="bg-white px-5 border-[1px] flex justify-center items-center">Biographie</div>
+                        <input class="w-full" type="text" placeholder="Biographie de l'artiste" v-model="Artistes.Bio" required>
+                    </div>
 
-    <section class="pb-6 mx-2 md:max-w-[70%] md:m-auto lg:max-w-[50%] lg:pb-14">
-        <div class="bg-red-800 dark:bg-Dark-marron p-2 rounded-xl flex gap-2">
-            <div class="mx-auto flex flex-col justify-end mb-10">
-                <img class="mb-10 w-40 rounded-xl" src="/public/images/Artistes-FF.png" alt="Image de l'artiste">
-                <BoutonImage class="w-32 mx-auto" Nom="Changer l'image"/>
-            </div>
-            <div class="m-auto">
-                <label class="flex flex-col mb-3">
-                    <span class="font-semibold my-1" >Nom :  </span>
-                    <input type="text" class="bg-jaune rounded-xl border-none w-80"><!--v-model="Artistes.Nom" -->
-                </label>
-                <label class="flex flex-col mb-3">
-                    <span class="font-semibold my-1">Catégorie :  </span>
-                    <input type="text" class="bg-jaune rounded-xl border-none" placeholder="Catégorie">
-                </label>
-                <label class="flex flex-col mb-3">
-                    <span class="font-semibold my-1">Biographie :  </span>
-                    <input type="email" class="bg-jaune rounded-xl border-none" placeholder="Biographie">
-                </label>
-                <label class="flex flex-col mb-3">
-                    <span class="font-semibold my-1">Jours de disponibilité :</span>
-                    <input type="text" class="bg-jaune rounded-xl border-none" placeholder="Les disponibilité">
-                </label>
-                <div class="flex justify-end mt-8 mb-2 mr-4">
-                    <Bouton2 Nom="Sauvegarder"/>
+                    <div class="flex h-10 text-white rounded-sm overflow-hidden">
+                        <div class="bg-true-gray-25 px-5 border-[1px] flex justify-center items-center">Photo</div>
+                        <div class="relative w-full">
+                            <input type="file" class="w-full relative" ref="file" id="file" @change="previewImage">
+                            <label class="absolute w-full left-0 top-0 bottom-0 bg-white text-black flex justify-center items-center" for="file">Sélectionner l'image</label>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </section>
-    <footer1 />
+            
+            <div class="grid grid-cols-2 w-full place-items-center">
+                <button class="w-fit px-6 py-3 text-white" type="submit">Modifier</button>
+                <button class="w-fit px-6 py-3 text-white" type="button"><RouterLink to="/listeartistes">Annuler</RouterLink></button>
+            </div>
+            </div>
+        </form>
+    </div>
+    <Footer1 />
 </template>
 
 <script>
-import footer1 from '../../components/Footer.vue';
-import header1 from '../../components/Header.vue';
-import BoutonImage from '../../components/icones/modifierListe/BoutonImage.vue';
+import Header1 from '../../components/Header.vue'
+import Footer1 from '../../components/Footer.vue'
+import BoutonImage from '../../components/icones/modifierListe/BoutonImage.vue'
+import { 
+    getFirestore, 
+    collection, 
+    doc, 
+    getDoc,
+    updateDoc, 
+    onSnapshot, 
+    query,
+    orderBy
+    } from 'https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js'
+import { 
+    getStorage, 
+    ref, 
+    getDownloadURL,
+    uploadString,
+    deleteObject} from 'https://www.gstatic.com/firebasejs/9.8.2/firebase-storage.js'
 export default {
-  name: "App",
-  components: { BoutonImage, header1, footer1 },
-};
+    data(){
+        return{
+            imageData:null, 
+               
+            Artistes:{   
+                Nom:null,
+                Bio:null,  
+                photo:null, 
+            },
+
+            refArtiste:null,     
+            imgModifiee:false,       
+            photoActuelle:null 
+        }
+    },
+    components: { Header1, Footer1, BoutonImage },
+    mounted(){
+        this.getArtiste(this.$route.params.id);
+    },
+    methods:{
+        previewImage: function(event){
+          this.file = this.$refs.file.files[0];
+          this.Artistes.photo = this.file.name;
+          this.imgModifiee = true;
+          var input = event.target;
+          if(input.files && input.files[0]){
+              var reader = new FileReader();
+              reader.onload = (e) => {
+                  this.imageData = e.target.result;
+              }
+              reader.readAsDataURL(input.files[0]);
+          }
+      },
+
+      async getArtiste(id){
+          const firestore = getFirestore();
+          const docRef = doc(firestore, "Artistes", id);
+          this.refArtiste = await getDoc(docRef);
+          if(this.refArtiste.exists()){
+              this.Artistes = this.refArtiste.data();
+              this.photoActuelle = this.Artistes.photo;
+          }else{
+              this.console.log("artiste inexistant");
+          }
+          const storage = getStorage();
+          const spaceRef = ref(storage, 'artistes/'+this.Artistes.photo);
+          getDownloadURL(spaceRef)
+            .then((url)=>{
+                this.imageData = url;
+            })
+            .catch((error) => {
+                console.log('erreur downloadurl', error);
+            })
+      },
+
+      async updateArtiste(){
+          if(this.imgModifiee){
+              const storage = getStorage();
+              let docRef = ref(storage, 'artistes/'+this.photoActuelle);
+              deleteObject(docRef);
+              docRef = ref(storage, 'artistes/'+this.Artistes.photo);
+              await uploadString(docRef, this.imageData, 'data_url').then((snapshot) =>{
+                  console.log('Uploaded a base64 string', this.Artistes.photo);
+              });
+          }
+          const firestore = getFirestore();
+          await updateDoc(doc(firestore, "Artistes", this.$route.params.id), this.Artistes);
+          this.$router.push('/listeartistes');
+      }
+    }
+}
+
 </script>
