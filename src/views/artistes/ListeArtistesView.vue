@@ -26,25 +26,6 @@
             </RouterLink>
           </div>
         </form>
-                <form>
-          <h6 class="text-black dark:text-white">Nouvel artiste</h6>
-          <div class="">
-            <div class="">
-              <span class="text-black dark:text-white">Nom</span>
-            </div>
-            <input type="text" class="bg-red-800 text-white" v-model="Nom" required />
-            <button class="" type="button" @click='createArtistes()' title="Création">
-              <Creation />
-            </button>
-          </div>
-            <div class="">
-              <span class="text-black dark:text-white">Biographie</span>
-            </div>
-            <input type="text" class="bg-red-800 text-white" v-model="Bio" required />
-            <button class="" type="button" @click='createArtistes()' title="Création">
-              <Creation />
-            </button>
-        </form>
 
         <div class="">
             <table class="">
@@ -76,11 +57,11 @@
                               </div>
                               <input type="text" class="bg-red-800 text-white" v-model="Artistes.Nom" required />
                               <button class="fill-black" type="button" @click.prevent="updateArtistes(Artistes)" title="Modification">
-                               <RouterLink to="/modifier">
-                               <Modification />
+                               <RouterLink :to="{ name:'ModifierView', params:{ id:Artistes.id}}">
+                               <Modification/>
                                </RouterLink>
                               </button>
-                              <RouterLink to="/Supprimer">
+                              <RouterLink :to="{ name:'DeleteView', params:{ id:Artistes.id}}">
                                 <Supprimer />
                               </RouterLink>
                             </div>
@@ -91,12 +72,13 @@
             </table>
         </div>
     </div>
- <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,2fr))] gap-8 py-10">
+ <div class="grid grid-cols-3">
         <div v-for="Artistes in listeArtistesSynchro" :key="Artistes.id">
             <card
                 :Nom="Artistes.Nom"
                 :Bio="Artistes.Bio"
-                :photo="Artistes.photo" />
+                :photo="Artistes.photo"
+                :id="Artistes.id" />
         </div>
 
 </div>
@@ -159,7 +141,7 @@ export default {
             this.getArtistesSynchro();
         },
         methods: {
-            async getArtistesSynchro(){
+              async getArtistesSynchro(){
                 // Obtenir Firestore
                 const firestore = getFirestore();
                 // Base de données (collection)  document pays
@@ -170,7 +152,18 @@ export default {
                     // On utilse map pour récupérer l'intégralité des données renvoyées
                     // on identifie clairement le id du document
                     // les rest parameters permet de préciser la récupération de toute la partie data
-                    this.listeArtistesSynchro = snapshot.docs.map(doc => ({id:doc.id, ...doc.data()})); 
+                    this.listeArtistesSynchro = snapshot.docs.map(doc => ({id:doc.id, ...doc.data()}));
+                    this.listeArtistesSynchro.forEach(function(artistes){
+                      const storage = getStorage();
+                      const spaceRef = ref(storage, 'artistes/'+artistes.photo);
+                      getDownloadURL(spaceRef)
+                      .then((url) => {
+                        artistes.photo = url;
+                      })
+                      .catch((error) =>{
+                        console.log('erreur downloadUrl', error)
+                      })
+                    }) 
                 })
             },
             async createArtistes(){
