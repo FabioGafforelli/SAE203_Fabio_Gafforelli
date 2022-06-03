@@ -18,6 +18,12 @@
                 Nom="Inscription d'un artiste"/>
               </div>
             </RouterLink>
+            <RouterLink to="/artistes">
+              <div class="flex justify-start mr-40 my-6">
+                <BoutonImage @click='createArtistes()' title="Retour page artiste"
+                Nom="Retour page artiste"/>
+              </div>
+            </RouterLink>
           </div>
         </form>
                 <form>
