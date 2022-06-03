@@ -122,6 +122,14 @@ import {
     updateDoc, 
     deleteDoc, 
     onSnapshot } from 'https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js'
+
+import {
+    getStorage,
+    ref,
+    getDownloadURL,
+    uploadString,
+    } from 'https://www.gstatic.com/firebasejs/9.8.2/firebase-storage.js'
+
 export default {
     data(){ // Données de la vue
             return{                
@@ -203,7 +211,16 @@ export default {
                 // Suppression du pays référencé
                 await deleteDoc(docRef);
              },
-        
+async createArtistes(){
+            const storage = getStorage();
+            const refStorage = ref(storage, 'artistes/'+this.Artistes.photo);
+            await uploadString(refStorage, this.imageData, 'data_url').then((snapshot) => {
+                console.log('Uploaded a base64 string');
+                const db = getFirestore();
+                const docRef = addDoc(collection(db, 'Artistes'), this.Artistes);
+            });
+            this.$router.push('/listeartistes')
+        },
 },
   name: "App",
   components: { card, Rechercher, Modification, Supprimer, Header1, Footer1, BoutonImage, Creation },
