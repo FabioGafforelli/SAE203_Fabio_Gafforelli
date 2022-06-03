@@ -27,7 +27,7 @@ export default {
 <br>
  <div class="grid grid-cols-1 pl-10 pr-10 ">
   <label class="dark:text-white" for="emailAddress">Adresse Mail*</label>
-              <input id="emailAddress" type="email" name="email" placeholder="Indiquez votre email" required class="my-6 border relative:  border-red-800">
+              <input id="emailAddress" type="email" name="email" placeholder="Fabio@adressemail.com" required class="my-6 border relative:  border-red-800">
   </div>
  <div class="grid grid-cols-1 pl-10 pr-10 ">
      <p class="dark:text-white">Objet du message*</p>
