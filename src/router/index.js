@@ -28,10 +28,10 @@ const router = createRouter({
     { path: '/ficheartiste', name: 'Fiche_artisteView', component: Fiche_artisteView },
     { path: '/ficheconcert', name: 'Fiche_ConcertView', component: Fiche_concertView },
     { path: '/style-guide', name: 'StyleGuideView', component: StyleGuideView },
-    { path: '/Modifier', name: 'ModifierView', component: ModifierView },
+    { path: '/Modifier/:id', name: 'ModifierView', component: ModifierView },
     { path: '/inscription', name: 'CreateView', component: CreateView },
     { path: '/listeartistes', name: 'ListeArtistesView', component: ListeArtistesView },
-    { path: '/Supprimer', name: 'DeleteView', component: DeleteView },
+    { path: '/Supprimer/:id', name: 'DeleteView', component: DeleteView },
   ]
 })
 
